@@ -49,6 +49,8 @@ const Featured = () => {
               <KeyboardArrowUpOutlined fontSize="small" />
               <div className="resultAmount ">$12.4k</div>
             </div>
+            
+            
           </div>
         </div>
       </div>
