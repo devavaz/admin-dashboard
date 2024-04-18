@@ -12,9 +12,14 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
+import useDarkMode from "../../darkMode";
+
 
 
 const Siderbar = () => {
+
+  const { toggleDarkMode } = useDarkMode()
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -86,8 +91,8 @@ const Siderbar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div onClick={toggleDarkMode} className="colorOption"></div>
+        <div onClick={toggleDarkMode} className="colorOption"></div>
       </div>
     </div>
   ); 

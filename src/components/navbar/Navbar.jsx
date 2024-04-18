@@ -5,8 +5,12 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import useDarkMode from "../../darkMode";
 
 const Navbar = () => {
+
+  const { toggleDarkMode } = useDarkMode()
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -19,7 +23,7 @@ const Navbar = () => {
             <LanguageOutlined className="icon" />
             English
           </div>
-          <div className="item">
+          <div onClick={toggleDarkMode} className="item">
             <DarkModeOutlinedIcon className="icon" />
           </div>
           <div className="item">

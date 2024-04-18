@@ -1,17 +1,19 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-// import List from "./pages/users/List"
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-
-
+import "./style/style.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "../formSource";
+import useDarkMode from "./darkMode";
+
 
 function App() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
-    <>
+    <div className={`app ${isDarkMode ? 'dark' : ''}`}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -30,7 +32,8 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+      <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
+    </div>
   );
 }
 
