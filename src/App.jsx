@@ -10,7 +10,7 @@ import useDarkMode from "./darkMode";
 
 
 function App() {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <div className={`app ${isDarkMode ? 'dark' : ''}`}>
@@ -32,8 +32,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
-    </div>
+\    </div>
   );
 }
 
